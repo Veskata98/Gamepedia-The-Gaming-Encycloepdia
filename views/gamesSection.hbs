@@ -1,0 +1,45 @@
+<section class="games-section">
+    <div class="games-section-header">
+        <h1 class="games-heading">
+            {{sectionHeading}}
+        </h1>
+        <form action="/games{{#if platformName}}/{{platformName}}{{/if}}">
+            <input type="text" name="search" placeholder="Enter game name..." value="{{search}}">
+            <button>Search</button>
+        </form>
+    </div>
+    <div class="games-section-main-wrapper">
+        <div class="games-show-options">
+            <h3>Platofrms</h3>
+            <ul class="games-show-options-list" role="list">
+                <li class="games-show-options-item"><a href="/games/pc">PC</a></li>
+                <li class="games-show-options-item"><a href="/games/playstation5">PlayStation 5</a></li>
+                <li class="games-show-options-item"><a href="/games/playstation4">PlayStation 4</a></li>
+                <li class="games-show-options-item"><a href="/games/xbox-one">Xbox One</a></li>
+                <li class="games-show-options-item"><a href="/games/nintendo-switch">Nintendo Switch</a></li>
+                <li class="games-show-options-item"><a href="/games/ios">iOS</a></li>
+                <li class="games-show-options-item"><a href="/games/android">Android</a></li>
+            </ul>
+        </div>
+        <div class="games-container-wrapper">
+            <div class='games-container'>
+                {{#if notFoundGames}}
+                    <h2>Not found any games with your search criteria.</h2>
+                {{else}}
+                    {{#each games}}
+                        {{> games-card}}
+                    {{/each}}
+                {{/if}}
+            </div>
+
+            {{#if notFoundGames}}
+            {{else}}
+                <p class="games-pagination">
+                    {{#if prevPage}}<a href="/games{{#if platformName}}/{{platformName}}{{/if}}?{{#if search}}search={{search}}&{{/if}}page={{prevPage}}">Prev<</a>{{/if}}
+                    Page {{page}} of {{pages}} 
+                    {{#if nextPage}}<a href="/games{{#if platformName}}/{{platformName}}{{/if}}?{{#if search}}search={{search}}&{{/if}}page={{nextPage}}">>Next</a>{{/if}}
+                </p>
+            {{/if}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<section class="platform-section">
+    {{#with platform}}
+        <h1 class='platform-details-title'>
+            Gaming platform: {{name}}
+        </h1>
+        <p class='platform-details-games_count'>
+            Available games: {{games_count}}
+        </p>
+        <p class='platform-details-description'>
+            {{description}}
+        </p>
+        <a class="platform-return-link" href="javascript:history.back()">Return to platforms</a>
+    {{/with}}
+
+    <div class="topGames-container">
+        <h2 class='topGames-title'>
+            Top 10 Rated Games for {{platform.name}}
+        </h2>
+        <div class='topGames-container'>
+            {{#each topGames}}
+                {{> topGames}}
+            {{/each}}
+        </div>
+    </div>
+
+</section>

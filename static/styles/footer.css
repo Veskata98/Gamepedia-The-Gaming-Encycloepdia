@@ -1,0 +1,12 @@
+.footer {
+    background-color: lightsalmon;
+    color: #000;
+    text-align: center;
+}
+
+.footer-rights {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    padding: 0.75rem;
+}

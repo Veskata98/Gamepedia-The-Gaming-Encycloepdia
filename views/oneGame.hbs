@@ -1,0 +1,53 @@
+{{#with game}}
+    <section class='oneGame-section'>
+        <img class='oneGame-background-img' src='{{background_image}}' alt='background-img' />
+        <div class='oneGame-container'>
+            <a class='oneGame-return-link' href='javascript:history.back()'>
+                Return
+            </a>
+
+            <h1 class='oneGame-title'>
+                {{name}}
+            </h1>
+
+            <p class='omeGame bold_p'>
+                Release Date:
+                <span class='omeGame normal_span'>
+                    {{released}}
+                </span>
+            </p>
+
+            <p class='omeGame bold_p'>
+                Platforms:
+                <span class='omeGame normal_span'>
+                    {{availablePlatforms}}
+                </span>
+            </p>
+
+            <p class='omeGame bold_p last'>
+                Genres:
+                <span class='omeGame normal_span'>
+                    {{genres}}
+                </span>
+            </p>
+
+            <h5 class='oneGame-description-title'>
+                Description:
+            </h5>
+            <p class='oneGame-description'>
+                {{description_raw}}
+            </p>
+
+            <p class='oneGame-stores-title'>
+                Stores
+            </p>
+            <div class='oneGame-stores-links'>
+                {{#each stores}}
+                    <a class='oneGame-stores-link' href='{{url}}' target='_blank'>
+                        {{store_name}}
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+{{/with}}
