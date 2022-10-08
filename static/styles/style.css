@@ -17,4 +17,13 @@ main {
     width: 75%;
     margin: auto;
     background-color: #fff;
+    height: calc(100% - 8rem);
+}
+
+.active {
+    background-color: #000;
+}
+
+.active a {
+    color: #fff;
 }

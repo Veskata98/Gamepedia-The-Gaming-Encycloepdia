@@ -94,6 +94,16 @@ router.get('/:id', async (req, res) => {
         const platformName = id;
         const platformId = PLATFORMS[platformName];
 
+        const links = [];
+
+        Object.keys(PLATFORMS).forEach((x) => {
+            if (x == platformName) {
+                links.push(true);
+            } else {
+                links.push(false);
+            }
+        });
+
         try {
             const search = req.query?.search?.trim();
             const page = req.query?.page || 1;
@@ -129,6 +139,7 @@ router.get('/:id', async (req, res) => {
                 nextPage,
                 prevPage: Number(page) - 1,
                 pages,
+                links,
             });
         } catch (error) {
             res.render('404', {
