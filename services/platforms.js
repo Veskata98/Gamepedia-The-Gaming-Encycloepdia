@@ -1,10 +1,10 @@
-import { rawgAPIKey, XRapidAPIHost, XRapidAPIKey } from './APICalls.js';
+import { rawgAPIKey, RAWG_API_HOST, XRapidAPIKey } from './APICalls.js';
 
 const OPTIONS = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': XRapidAPIKey,
-        'X-RapidAPI-Host': XRapidAPIHost,
+        'X-RapidAPI-Host': RAWG_API_HOST,
     },
 };
 

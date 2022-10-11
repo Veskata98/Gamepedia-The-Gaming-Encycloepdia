@@ -1,3 +1,21 @@
-<h1>
-    Gaming News
-</h1>
+<section class='home-section'>
+    <h1 class='home-heading'>
+        Gaming News
+    </h1>
+    <div class='home-news-container'>
+        {{#each news}}
+            <article class='home-news-article'>
+                <img src='{{image}}' alt='news_img' class='home-news-article-img' />
+                <h3 class='home-news-article-title'>
+                    {{title}}
+                </h3>
+                <p class='home-news-article-date'>
+                    {{date}}
+                </p>
+                <a href='{{link}}' class='home-news-article-link' target='_blank'>
+                    Read More...
+                </a>
+            </article>
+        {{/each}}
+    </div>
+</section>

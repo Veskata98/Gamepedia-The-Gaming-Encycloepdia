@@ -1,9 +1,12 @@
 @import './reset.css';
 @import './header.css';
+@import './home.css';
 @import './platform.css';
 @import './games.css';
 @import './footer.css';
 @import './not-found.css';
+
+@import './auth.css';
 
 html {
     font-family: 'Roboto', sans-serif;

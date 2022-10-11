@@ -1,0 +1,21 @@
+<section class='register-section'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    <div class='register-block'>
+        <form action='/auth/register' method='post'>
+            <h1>
+                Register
+            </h1>
+            <input type='text' value='' placeholder='Username' name='username' />
+            <input type='password' value='' placeholder='Password' name='password' />
+            <input type='password' value='' placeholder='Repeat Password' name='repass' />
+            <button>
+                Sign Up
+            </button>
+        </form>
+        <div class='auth-redirect-container'>
+            <a class='auth-redirect-link' href='/auth/login'>
+                Already have an account? Sign in
+            </a>
+        </div>
+    </div>
+</section>
