@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { gameById, gameStores, getAllGames, gamesByPlatform } from '../services/games.js';
 
-const router = Router();
+const gamesController = Router();
 
 const STORES = {
     1: 'Steam',
@@ -26,7 +26,7 @@ const PLATFORMS = {
     android: 21,
 };
 
-router.get('/', async (req, res) => {
+gamesController.get('/', async (req, res) => {
     const search = req.query?.search?.trim();
     const page = req.query?.page || 1;
 
@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+gamesController.get('/:id', async (req, res) => {
     const id = req.params.id;
     if (!isNaN(id)) {
         try {
@@ -149,4 +149,4 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-export { router as gamesController };
+export { gamesController };
