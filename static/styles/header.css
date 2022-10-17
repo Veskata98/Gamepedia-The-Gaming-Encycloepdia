@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 .header {
-    background-color: lightsalmon;
+    background-color: #9d7aff;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
 }
 
 .header-nav {
@@ -28,11 +31,11 @@
 
 .header-logo-title {
     font-size: 2rem;
-    color: black;
+    color: #fff;
 }
 
 .header-logo-title a {
-    color: black;
+    color: #fff;
 }
 
 .header-list {
@@ -43,10 +46,10 @@
 .header-item a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: black;
+    color: #fff;
+    font-weight: 500;
 }
 
 .header-item a:hover {
-    color: white;
     text-decoration: underline;
 }

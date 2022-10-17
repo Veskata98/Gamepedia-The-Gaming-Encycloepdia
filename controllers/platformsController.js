@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getPlatforms, platformById, topRatedGamesByPlatform } from '../services/platforms.js';
+import { getPlatforms, platformById, topRatedGamesByPlatform } from '../services/platformService.js';
 
 const platformController = Router();
 

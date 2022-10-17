@@ -29,7 +29,6 @@ authController.post('/login', isGuest, async (req, res) => {
         res.redirect('/');
     } catch (error) {
         const errorMessages = errorParser(error);
-        console.log(errorMessages);
         res.render('login', { title: 'Login - Cubicle', errorMessages, username });
     }
 });

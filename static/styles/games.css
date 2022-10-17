@@ -28,8 +28,8 @@
     margin-left: 1rem;
     padding: 0.5 1rem;
     font-size: 1.5rem;
-    background-color: #ffa07a;
-    border: 1px solid #ffa07a;
+    background-color: #9d7aff;
+    border: 1px solid #9d7aff;
 }
 
 .games-section-header form button:hover {
@@ -131,6 +131,7 @@
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 500;
 
     display: flex;
     justify-content: center;

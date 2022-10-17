@@ -1,6 +1,14 @@
 .home-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-subheading {
     font-size: 2rem;
     padding: 2rem;
+    padding-top: 0;
 }
 
 .home-news-container {
@@ -15,7 +23,7 @@
 
 .home-news-article {
     width: calc(50% - 1rem);
-    background-color: lightsalmon;
+    background-color: #9d7aff;
     border-radius: 1rem;
     min-height: 30rem;
 }

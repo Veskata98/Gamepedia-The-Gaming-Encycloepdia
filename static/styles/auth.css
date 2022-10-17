@@ -12,20 +12,21 @@
 .register-block {
     width: 30rem;
     padding: 20px;
-    background: lightgray;
+    background: rgb(161, 161, 161);
     border-radius: 5px;
-    border-top: 5px solid lightsalmon;
+    border-top: 5px solid #9d7aff;
     margin: 0 auto;
 }
 
 .login-block h1,
 .register-block h1 {
     text-align: center;
-    color: #000;
+    color: #fff;
     font-size: 18px;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 .login-block input,
@@ -36,7 +37,7 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 1rem;
     font-family: Montserrat;
     padding: 0 20px 0 50px;
     outline: none;
@@ -48,12 +49,6 @@
     background-size: 16px 80px;
 }
 
-.login-block input[name='username']:focus,
-.register-block input[name='username']:focus {
-    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
-    background-size: 16px 80px;
-}
-
 .login-block input[name='password'],
 .register-block input[name='password'],
 .register-block input[name='repass'] {
@@ -61,28 +56,21 @@
     background-size: 16px 80px;
 }
 
-.login-block input[name='password']:focus,
-.register-block input[name='password']:focus,
-.register-block input[name='repass']:focus {
-    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
-    background-size: 16px 80px;
-}
-
 .login-block input:active,
 .register-block input:active,
 .login-block input:focus,
 .register-block input:focus {
-    border: 1px solid lightsalmon;
+    border: 1px solid #9d7aff;
 }
 
 .login-block button,
 .register-block button {
     width: 100%;
     height: 40px;
-    background: lightsalmon;
+    background: #9d7aff;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid #e15960;
+    border: 1px solid #45d4f8;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -94,13 +82,13 @@
 
 .login-block button:hover,
 .register-block button:hover {
-    background: #ff7b81;
+    background: #45d4f8;
 }
 
 .auth-redirect-link {
-    color: #e15960;
+    color: #fff;
 }
 
 .auth-redirect-link:hover {
-    color: #da898d;
+    color: #9d7aff;
 }
