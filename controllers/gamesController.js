@@ -122,7 +122,7 @@ gamesController.get('/:id', async (req, res) => {
             //Uppercasing platform name
             let platformNameUpperCase = platformName.toUpperCase();
 
-            //Adding space between platform name and collection number at end
+            //Adding space between platform name and platform number
             if (!isNaN(platformNameUpperCase[platformNameUpperCase.length - 1])) {
                 platformNameUpperCase = platformNameUpperCase.slice(0, -1) + ' ' + platformNameUpperCase.slice(-1);
             }

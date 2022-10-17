@@ -1,11 +1,12 @@
 import { Router } from 'express';
 import { getNews } from '../services/news.js';
 
-const router = Router();
+const homeController = Router();
 
-router.get('/', async (req, res) => {
+homeController.get('/', async (req, res) => {
     try {
-        const gamingNews = await getNews();
+        // const gamingNews = await getNews();
+        const gamingNews = new Promise();
 
         gamingNews.forEach((x) => {
             x.date = x.date.toLocaleString();
@@ -17,4 +18,4 @@ router.get('/', async (req, res) => {
     }
 });
 
-export { router as homeController };
+export { homeController };

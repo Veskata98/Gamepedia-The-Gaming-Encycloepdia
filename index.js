@@ -8,7 +8,7 @@ const PORT = 3000;
 
 const app = express();
 
-databaseConfig(app);
+await databaseConfig(app);
 expressConfig(app);
 routesConfig(app);
 

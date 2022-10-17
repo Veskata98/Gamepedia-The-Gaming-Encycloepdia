@@ -1,5 +1,14 @@
 <section class='register-section'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    {{#if errorMessages}}
+        <div class='error'>
+            {{#each errorMessages}}
+                <p>
+                    {{this}}
+                </p>
+            {{/each}}
+        </div>
+    {{/if}}
     <div class='register-block'>
         <form action='/auth/register' method='post'>
             <h1>

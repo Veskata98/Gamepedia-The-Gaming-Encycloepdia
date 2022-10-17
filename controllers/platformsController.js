@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { getPlatforms, platformById, topRatedGamesByPlatform } from '../services/platforms.js';
 
-const router = Router();
+const platformController = Router();
 
-router.get('/', async (req, res) => {
+platformController.get('/', async (req, res) => {
     try {
         const platforms = await getPlatforms();
         res.render('platforms', { title: 'Platforms - Gamepedia', platforms });
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:platform_id', async (req, res) => {
+platformController.get('/:platform_id', async (req, res) => {
     const platform_id = req.params.platform_id;
 
     try {
@@ -33,4 +33,4 @@ router.get('/:platform_id', async (req, res) => {
     }
 });
 
-export { router as platformController };
+export { platformController };
