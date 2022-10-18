@@ -7,15 +7,20 @@
         {{#each news}}
             <article class='home-news-article'>
                 <img src='{{image}}' alt='news_img' class='home-news-article-img' />
-                <h3 class='home-news-article-title'>
-                    {{title}}
-                </h3>
-                <p class='home-news-article-date'>
-                    {{date}}
-                </p>
-                <a href='{{link}}' class='home-news-article-link' target='_blank'>
-                    Read More...
-                </a>
+                <div class='home-news-article-text'>
+                    <h3 class='home-news-article-title'>
+                        {{title}}
+                    </h3>
+                    <p class='home-news-article-date'>
+                        {{date}}
+                    </p>
+                    <p class='home-news-article-desc'>
+                        {{description}}
+                    </p>
+                    <a href='{{link}}' class='home-news-article-link' target='_blank'>
+                        Read More
+                    </a>
+                </div>
             </article>
         {{/each}}
     </div>

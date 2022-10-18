@@ -11,7 +11,7 @@ const authController = Router();
 /////////////////////////////
 
 authController.get('/login', isGuest, (req, res) => {
-    res.render('login', { title: 'Login - Cubicle' });
+    res.render('login', { title: 'Sing In - Gamepedia' });
 });
 
 authController.post('/login', isGuest, async (req, res) => {
@@ -29,7 +29,7 @@ authController.post('/login', isGuest, async (req, res) => {
         res.redirect('/');
     } catch (error) {
         const errorMessages = errorParser(error);
-        res.render('login', { title: 'Login - Cubicle', errorMessages, username });
+        res.render('login', { title: 'Sing In - Gamepedia', errorMessages, username });
     }
 });
 
@@ -37,7 +37,7 @@ authController.post('/login', isGuest, async (req, res) => {
 /////////////////////////////
 
 authController.get('/register', isGuest, (req, res) => {
-    res.render('register', { title: 'Register - Cubicle' });
+    res.render('register', { title: 'Sign Up - Gamepedia' });
 });
 
 authController.post(
@@ -74,7 +74,7 @@ authController.post(
             res.redirect('/auth/register');
         } catch (error) {
             const errorMessages = errorParser(error);
-            res.render('register', { title: 'Register - Cubicle', errorMessages, username });
+            res.render('register', { title: 'Sign Up - Gamepedia', errorMessages, username });
         }
     },
 );
@@ -82,7 +82,7 @@ authController.post(
 //LOGOUT
 /////////////////////////////
 
-authController.get('/logout', hasUser, (req, res) => {
+authController.post('/logout', hasUser, (req, res) => {
     res.clearCookie('token');
     res.redirect('/');
 });

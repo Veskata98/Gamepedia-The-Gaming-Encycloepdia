@@ -1,10 +1,10 @@
 .header {
-    background-color: #9d7aff;
+    background-color: #7952e2;
     position: relative;
     z-index: 2;
-    box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 12px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 12px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 12px -10px rgba(0, 0, 0, 0.75);
 }
 
 .header-nav {
@@ -25,8 +25,12 @@
     align-items: center;
 }
 
-.header-logo-img {
+.header-brand-logo {
     width: 3.5rem;
+    margin-right: 0.75rem;
+}
+.header-brand-name {
+    width: 10rem;
 }
 
 .header-logo-title {
@@ -43,6 +47,11 @@
     gap: 1.5rem;
 }
 
+.header-item:first-of-type {
+    display: flex;
+    align-items: center;
+}
+
 .header-item a {
     text-decoration: none;
     font-size: 1.5rem;
@@ -51,5 +60,32 @@
 }
 
 .header-item a:hover {
+    text-decoration: underline;
+}
+
+.header-item-username {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #00ffff;
+}
+
+.header-logout-form {
+    margin: 0;
+}
+
+.logout-btn {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    line-height: 1.45;
+}
+
+.logout-btn:hover {
     text-decoration: underline;
 }

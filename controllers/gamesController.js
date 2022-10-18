@@ -26,6 +26,16 @@ const PLATFORMS = {
     android: 21,
 };
 
+const PLATFORM_TITLES = {
+    pc: 'PC',
+    playstation5: 'PlayStation 5',
+    playstation4: 'PlayStation 4',
+    'xbox-one': 'Xbox-One',
+    'nintendo-switch': 'Nintendo Swtich',
+    ios: 'iOS',
+    android: 'Android',
+};
+
 gamesController.get('/', async (req, res) => {
     const search = req.query?.search?.trim();
     const page = req.query?.page || 1;
@@ -119,18 +129,9 @@ gamesController.get('/:id', async (req, res) => {
             let pages = Math.ceil(games.count / 15);
             let nextPage = Number(page) + 1 <= pages ? Number(page) + 1 : null;
 
-            //Uppercasing platform name
-            let platformNameUpperCase = platformName.toUpperCase();
-
-            //Adding space between platform name and platform number
-            if (!isNaN(platformNameUpperCase[platformNameUpperCase.length - 1])) {
-                platformNameUpperCase = platformNameUpperCase.slice(0, -1) + ' ' + platformNameUpperCase.slice(-1);
-            }
-
             res.render('gamesSection', {
-                title: `${platformNameUpperCase} Games - Gamepedia`,
-                sectionHeading: platformNameUpperCase + ' Games',
-                platformNameUpperCase,
+                title: `${PLATFORM_TITLES[platformName]} Games - Gamepedia`,
+                sectionHeading: `${PLATFORM_TITLES[platformName]} Games`,
                 platformName,
                 games: games.results,
                 notFoundGames,

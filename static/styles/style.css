@@ -23,18 +23,18 @@ main {
     margin: auto;
     background-image: linear-gradient(
         to right top,
-        #6f6bd1,
-        #7077d7,
-        #7283dc,
-        #768fe0,
-        #7c9ae3,
-        #74a7ec,
-        #6db3f3,
-        #69bff8,
-        #52cffe,
-        #41dfff,
-        #46eefa,
-        #5ffbf1
+        #a96bd1,
+        #9d75d9,
+        #917fdf,
+        #8587e3,
+        #7a8fe6,
+        #6897e8,
+        #589ee9,
+        #49a4e7,
+        #32ace2,
+        #28b2da,
+        #34b8d1,
+        #49bcc6
     );
     min-height: calc(100vh - 8rem);
 }

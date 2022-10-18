@@ -13,26 +13,30 @@
             <nav class='header-nav'>
                 <a class='header-link' href='/'>
                     <div class='header-logo-container'>
-                        <img class='header-logo-img' src='/static/assets/Logo.png' alt='logo-img' />
-                        <h1 class='header-logo-title'>
-                            Gamepedia
-                        </h1>
+                        <img class='header-brand-logo' src='/static/assets/Logo.png' alt='brand-img' />
+                        <img class='header-brand-name' src='/static/assets/gemepedia-text-logo.png' alt='brand-name' />
                     </div>
                 </a>
+
                 <ul class='header-list' role='list'>
+                    {{#if hasUser}}
+                        <li class='header-item'>
+                            <p class='header-item-username'>{{username}}</p>
+                        </li>
+                    {{/if}}
                     <li class='header-item'>
                         <a href='/'>
                             News
                         </a>
                     </li>
                     <li class='header-item'>
-                        <a href='/platforms'>
-                            Platforms
+                        <a href='/games'>
+                            Games
                         </a>
                     </li>
                     <li class='header-item'>
-                        <a href='/games'>
-                            Games
+                        <a href='/platforms'>
+                            Platforms
                         </a>
                     </li>
 
@@ -43,9 +47,9 @@
                             </a>
                         </li>
                         <li class='header-item'>
-                            <a href='/auth/logout'>
-                                Logout
-                            </a>
+                            <form class='header-logout-form' action='/auth/logout' method='post'>
+                                <button class='logout-btn'>Logout</button>
+                            </form>
                         </li>
                     {{else}}
                         <li class='header-item'>
