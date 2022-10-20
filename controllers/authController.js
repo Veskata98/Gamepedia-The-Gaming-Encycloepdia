@@ -3,7 +3,7 @@ import { Router } from 'express';
 import { login, register } from '../services/authService.js';
 import { hasUser, isGuest } from '../middlewares/guards.js';
 import { body, validationResult } from 'express-validator';
-import { errorParser } from '../utils/errorParser.js';
+// import { errorParser } from '../utils/errorParser.js';
 
 const authController = Router();
 
@@ -13,6 +13,8 @@ const authController = Router();
 authController.get('/login', isGuest, (req, res) => {
     res.render('login', { title: 'Sing In - Gamepedia' });
 });
+
+const { errorParser } = await import('../utils/errorParser.js');
 
 authController.post('/login', isGuest, async (req, res) => {
     const username = req.body.username.trim();

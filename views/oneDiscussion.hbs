@@ -1,0 +1,13 @@
+<section class='discussion-create-section'>
+    <h1>{{discussion.title}}</h1>
+    <p>{{discussion.creatorUsername}}</p>
+    <p>{{discussion.date}}</p>
+    <p>{{discussion.description}}</p>
+
+    {{#if isOwner}}
+        <a href='/forum/discussions/{{discussion._id}}/edit'>Edit Post</a>
+    {{/if}}
+
+    <a href='/forum'>Back to Forum</a>
+
+</section>

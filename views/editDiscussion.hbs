@@ -1,0 +1,18 @@
+<section class='discussion-create-section'>
+    {{#if errorMessages}}
+        <div class='error'>
+            {{#each errorMessages}}
+                <p>
+                    {{this}}
+                </p>
+            {{/each}}
+        </div>
+    {{/if}}
+    <form action='/forum/discussions/{{discussion._id}}/edit' method='post'>
+        <input type='text' value='{{discussion.title}}' placeholder='Title' name='title' />
+        <input type='text' value='{{discussion.description}}' placeholder='Description' name='description' />
+        <button>
+            Edit Post
+        </button>
+    </form>
+</section>

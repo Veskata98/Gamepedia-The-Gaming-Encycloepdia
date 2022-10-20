@@ -16,6 +16,7 @@ const endpoints = {
     allGames: (page) => `?key=${API_KEY}&page_size=15&page=${page}`,
     allGamesWithSearch: (search, page) => `?key=${API_KEY}&page_size=15&search=${search}&page=${page}`,
     getById: (gameId) => `/${gameId}?key=${API_KEY}`,
+    gameTrailer: (gameId) => `/${gameId}/movies?key=${API_KEY}`,
     allGamesByPlatform: (platformId, page) => `?key=${API_KEY}&platforms=${platformId}&page_size=15&page=${page}`,
     allGamesByPlatformWithSeacrh: (platformId, search, page) =>
         `?key=${API_KEY}&platforms=${platformId}&search=${search}&page_size=15&page=${page}`,
@@ -41,6 +42,11 @@ const getAllGames = async (search, page) => {
 
 const gameById = async (gameId) => {
     const response = await fetch(host + endpoints.getById(gameId), OPTIONS);
+    return await response.json();
+};
+
+const gameTrailer = async (gameId) => {
+    const response = await fetch(host + endpoints.gameTrailer(gameId), OPTIONS);
     return await response.json();
 };
 
@@ -75,4 +81,4 @@ const gameStores = async (gameId) => {
     return data.results;
 };
 
-export { getAllGames, gameById, gamesByPlatform, gamesByGenre, gameStores };
+export { getAllGames, gameById, gameTrailer, gamesByPlatform, gamesByGenre, gameStores };

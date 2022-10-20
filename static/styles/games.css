@@ -51,6 +51,8 @@
 
 .games-show-options-list {
     padding-left: 0;
+    margin: 0;
+    margin-top: 0.25rem;
 }
 
 .games-show-options-item {
@@ -105,6 +107,11 @@
     display: inline-block;
     font-size: 1.2rem;
     margin-bottom: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .games-name a {
@@ -137,6 +144,15 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color: #fff;
+}
+
+.games-pagination a {
+    color: #fff;
+}
+
+.games-pagination a:hover {
+    color: rgb(150, 223, 252);
 }
 
 /* One Game Section */
@@ -208,6 +224,10 @@
     margin-bottom: 2rem;
 }
 
+.trailer-container {
+    margin-bottom: 2rem;
+}
+
 .oneGame-stores-title {
     font-size: 2rem;
     font-weight: bold;
@@ -239,6 +259,9 @@
     background-color: rgb(174, 179, 184);
 
     padding: 0.5rem 1rem;
+
+    background-color: #00feff;
+    border-radius: 0.75rem;
 }
 
 .oneGame-return-link:hover {

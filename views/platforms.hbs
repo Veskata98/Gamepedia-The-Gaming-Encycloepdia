@@ -1,10 +1,24 @@
-<section>
-    <h1 class="platforms-heading">
-        Gaming Platforms
-    </h1>
-    <div class='platforms-container'>
-        {{#each platforms}}
-            {{> platform-card}}
-        {{/each}}
+<section class="plaftorms-section">
+    <div class="platforms-titles">
+        <h1 class="platforms-heading-main">Gaming Platforms</h1>
+        <h1 class="platforms-heading-news">Console News</h1>
+    </div>
+    <div class="platforms-wrapper">
+        <div class='platforms-container'>
+            {{#each platforms}}
+                {{> platform-card}}
+            {{/each}}
+        </div>
+        <div class="platforms-news">
+            <ul class="platforms-news-list" role="list">
+                {{#each platform_news}}
+                <li class="platforms-news-item">
+                    <a href="{{url}}" target="_blank">
+                        {{title}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </section>

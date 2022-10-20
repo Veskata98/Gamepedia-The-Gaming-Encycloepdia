@@ -1,0 +1,20 @@
+<section class='forum-section'>
+    <h1>Discussions</h1>
+    <div class='discussions-container'>
+        {{#each discussions}}
+            <a href='/forum/discussions/{{_id}}'>
+                <div>
+                    <h3>{{title}}</h3>
+                    <p>{{date}}</p>
+                </div>
+            </a>
+        {{/each}}
+    </div>
+    {{#if hasUser}}
+        <a href='/forum/discussions/create'>Create discussion</a>
+    {{/if}}
+
+    <ul>
+        <li><a href='/forum/myDiscussions'>My Discussions</a></li>
+    </ul>
+</section>

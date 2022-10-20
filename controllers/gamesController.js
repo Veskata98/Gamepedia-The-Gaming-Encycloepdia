@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { gameById, gameStores, getAllGames, gamesByPlatform } from '../services/gameService.js';
+import { gameById, gameStores, getAllGames, gamesByPlatform, gameTrailer } from '../services/gameService.js';
 
 const gamesController = Router();
 
@@ -75,6 +75,7 @@ gamesController.get('/:id', async (req, res) => {
     if (!isNaN(id)) {
         try {
             const game = await gameById(id);
+            const trailer = await gameTrailer(id);
             const stores = await gameStores(id);
 
             const availablePlatforms = [];
@@ -93,6 +94,10 @@ gamesController.get('/:id', async (req, res) => {
             game.stores = stores;
             game.availablePlatforms = availablePlatforms.join(', ');
             game.genres = genres.join(', ');
+
+            if (trailer.count != 0) {
+                game.trailer = trailer.results[0].data.max;
+            }
 
             res.render('oneGame', { title: `${game.name} - Gamepedia`, game });
         } catch (error) {
