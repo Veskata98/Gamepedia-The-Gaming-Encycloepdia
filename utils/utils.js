@@ -11,4 +11,13 @@ const errorParser = (error) => {
     return errors;
 };
 
-export { errorParser };
+const isOwner = (creatorId, req, res) => {
+    if (req.user?.userId == creatorId) {
+        res.locals.isOwner = true;
+        return true;
+    }
+
+    return false;
+};
+
+export { errorParser, isOwner };

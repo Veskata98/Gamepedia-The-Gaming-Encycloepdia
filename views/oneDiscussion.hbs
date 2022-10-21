@@ -1,13 +1,46 @@
-<section class='discussion-create-section'>
-    <h1>{{discussion.title}}</h1>
-    <p>{{discussion.creatorUsername}}</p>
-    <p>{{discussion.date}}</p>
-    <p>{{discussion.description}}</p>
+<section class='one-discussion-section'>
+    <div class='one-discussion-container'>
+        <h1>{{discussion.title}}</h1>
+        <div class='one-discussion-info'>
+            <p class='one-discussion-username'>Created by {{discussion.creatorUsername}}</p>
 
-    {{#if isOwner}}
-        <a href='/forum/discussions/{{discussion._id}}/edit'>Edit Post</a>
-    {{/if}}
+            <p class='one-discussion-descr'>{{discussion.description}}</p>
+            <p class='one-discussion-date'>{{discussion.date}}</p>
+        </div>
+    </div>
+    <div class='one-discussion-link-container'>
+        {{#if isOwner}}
+            <a href='/forum/discussions/{{discussion._id}}/edit'>Edit Post</a>
+        {{/if}}
 
-    <a href='/forum'>Back to Forum</a>
+        <a href='/forum'>Back to Forum</a>
+    </div>
+    <div class='comment-section'>
+        <h1 class='comment-section-title'>Comments</h1>
+        <div class='comments-container'>
+            <div class='comment'>
+                <h2 class='comment-username'>Fighter33</h2>
+                <p class='comment-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veniam sed ad
+                    mollitia nulla animi laborum odio officiis? Distinctio dolor atque accusamus, cumque tempora vitae
+                    pariatur praesentium velit voluptatibus similique!</p>
+                <p class='comment-date'>2 uni 2002</p>
+            </div>
+            <div class='comment'>
+                <h2 class='comment-username'>Fighter33</h2>
+                <p class='comment-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veniam sed ad
+                    mollitia nulla animi laborum odio officiis? Distinctio dolor atque accusamus, cumque tempora vitae
+                    pariatur praesentium velit voluptatibus similique!</p>
+                <p class='comment-date'>2 uni 2002</p>
+            </div>
+        </div>
+    </div>
+
+    <div class='add-comment'>
+        <h1 class='comment-section-title'>Post Comment</h1>
+        <form action='' method='post'>
+            <textarea name='' id='' cols='50' rows='5'></textarea>
+            <button>Post</button>
+        </form>
+    </div>
 
 </section>

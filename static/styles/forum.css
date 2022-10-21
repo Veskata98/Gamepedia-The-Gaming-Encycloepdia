@@ -1,0 +1,331 @@
+.forum-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.forum-container {
+    width: 70%;
+}
+
+.forum-heading {
+    text-decoration: none;
+    color: #fff;
+    background-color: #9d7aff;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.discussions-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.create-discussion-link {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.discussion-card {
+    background-color: #7242f8;
+    color: #fff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.discussion-container {
+    padding: 0.75rem;
+}
+
+.discussion-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    text-decoration: underline;
+}
+
+.discussion-date {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.discussion-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.forum-my-navigation {
+    width: 20%;
+}
+
+.forum-my-navigation ul {
+    padding-left: 0;
+}
+
+.forum-my-navigation ul li {
+    margin-bottom: 0.5rem;
+}
+
+.forum-my-navigation ul li a {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Create discussion section */
+
+.discussion-create-section {
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.discussion-create-block {
+    width: 30rem;
+    padding: 20px;
+    background: rgb(161, 161, 161);
+    border-radius: 5px;
+    border-top: 5px solid #7952e2;
+    margin: 0 auto;
+}
+
+.discussion-create-block h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.discussion-create-block input {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: Montserrat;
+    padding: 0 1.5rem 0 1rem;
+    outline: none;
+}
+
+.discussion-create-block textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 0.5rem 1.5rem 0 1rem;
+    font-size: 1rem;
+    font-family: Montserrat;
+    outline: none;
+}
+
+.discussion-create-block input:active {
+    border: 1px solid #7952e2;
+}
+
+.discussion-create-block button {
+    width: 100%;
+    height: 40px;
+    background: #7952e2;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #45d4f8;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.discussion-create-block button:hover {
+    background: #45d4f8;
+}
+
+.create-discussion-redirect-link {
+    color: #fff;
+}
+
+.create-discussion-redirect-link:hover {
+    color: #7952e2;
+}
+
+/* My discussions Section */
+
+.my-discussions-heading {
+    font-size: 2rem;
+}
+
+/* One discussion Section */
+
+.one-discussion-section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.one-discussion-container {
+    width: 70%;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    background-color: #ccb9ff;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 1rem;
+}
+
+.one-discussion-container h1 {
+    background-color: #7952e2;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+.one-discussion-info {
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+}
+
+.one-discussion-username {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.one-discussion-descr {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    background-color: #9d7aff;
+    min-height: 10rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.one-discussion-date {
+    text-align: end;
+}
+
+.one-discussion-link-container {
+    display: flex;
+    font-size: 1.5rem;
+    width: 50%;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+/* Comment Section */
+
+.comment-section {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.comment-section-title {
+    font-size: 2rem;
+}
+
+.comment {
+    background-color: #ccb9ff;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-username {
+    background-color: #7952e2;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding-left: 1rem;
+    margin-inline: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.comment-text {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    padding-inline: 1rem;
+}
+
+.comment-date {
+    text-align: end;
+    padding-right: 1rem;
+}
+
+/* Add comment */
+
+.add-comment {
+    width: 70%;
+    margin: auto;
+    background-color: #ccb9ff;
+    border-radius: 1rem;
+}
+
+.add-comment form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+.add-comment form textarea {
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem 0 1rem;
+    font-size: 1rem;
+    font-family: Montserrat;
+    outline: none;
+}
+
+.add-comment h1 {
+    padding-left: 1rem;
+    font-size: 1.75rem;
+}
+
+.add-comment form button {
+    width: 10rem;
+    height: 40px;
+    background: #7952e2;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #45d4f8;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.add-comment form button:hover {
+    background: #45d4f8;
+}

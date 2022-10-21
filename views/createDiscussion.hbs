@@ -1,4 +1,5 @@
 <section class='discussion-create-section'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
     {{#if errorMessages}}
         <div class='error'>
             {{#each errorMessages}}
@@ -8,11 +9,21 @@
             {{/each}}
         </div>
     {{/if}}
-    <form action='/forum/discussions/create' method='post'>
-        <input type='text' value='{{discussionTitle}}' placeholder='Title' name='title' />
-        <input type='text' value='{{discussionDescription}}' placeholder='Description' name='description' />
-        <button>
-            Post
-        </button>
-    </form>
+    <div class='discussion-create-block'>
+        <form action='/forum/discussions/create' method='post'>
+            <h1>
+                Create Discussion
+            </h1>
+            <input type='text' value='{{discussionTitle}}' placeholder='Title' name='title' />
+            <textarea type='text' placeholder='Description' name='description' />{{discussionDescription}}</textarea>
+            <button>
+                Post
+            </button>
+        </form>
+        <div class='create-discussion-redirect-container'>
+            <a class='create-discussion-redirect-link' href='javascript:history.back()'>
+                Back to Forum
+            </a>
+        </div>
+    </div>
 </section>

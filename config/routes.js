@@ -5,6 +5,7 @@ import { gamesController } from '../controllers/gamesController.js';
 
 import { myGamesController } from '../controllers/myGamesController.js';
 import { forumController } from '../controllers/forumController.js';
+import { discussionsController } from '../controllers/discussionsController.js';
 
 import { authController } from '../controllers/authController.js';
 
@@ -16,6 +17,7 @@ const routesConfig = (app) => {
 
     app.use('/myGames', myGamesController);
     app.use('/forum', forumController);
+    app.use('/forum/discussions', discussionsController);
 
     app.use('/auth', authController);
 };

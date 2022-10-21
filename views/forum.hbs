@@ -1,20 +1,30 @@
 <section class='forum-section'>
-    <h1>Discussions</h1>
-    <div class='discussions-container'>
-        {{#each discussions}}
-            <a href='/forum/discussions/{{_id}}'>
-                <div>
-                    <h3>{{title}}</h3>
-                    <p>{{date}}</p>
-                </div>
-            </a>
-        {{/each}}
-    </div>
-    {{#if hasUser}}
-        <a href='/forum/discussions/create'>Create discussion</a>
-    {{/if}}
+    <div class='forum-wrapper'>
+        <div class='forum-container'>
+            <a class='forum-heading {{#if links.[0]}} active {{/if}}' href='/forum'>Discussions</a>
+            <a class='forum-heading {{#if links.[1]}} active {{/if}}' href='#'>Reviews</a>
 
-    <ul>
-        <li><a href='/forum/myDiscussions'>My Discussions</a></li>
-    </ul>
+            <div class='discussions-container'>
+                {{#if hasUser}}
+                    <a class='create-discussion-link' href='/forum/discussions/create'>Create discussion</a>
+                {{/if}}
+                {{#each discussions}}
+                    <a class='discussion-card' href='/forum/discussions/{{_id}}'>
+                        <div class='discussion-container'>
+                            <h3 class='discussion-title'>{{title}}</h3>
+                            <p class='discussion-date'>{{date}}</p>
+                            <p class='discussion-description'>{{description}}</p>
+                        </div>
+                    </a>
+                {{/each}}
+            </div>
+
+        </div>
+        <div class='forum-my-navigation'>
+            <ul role='list'>
+                <li><a href='/forum/discussions/myDiscussions'>My Discussions</a></li>
+                <li><a href='/forum/discussions/myDiscussions'>My Reviews</a></li>
+            </ul>
+        </div>
+    </div>
 </section>
