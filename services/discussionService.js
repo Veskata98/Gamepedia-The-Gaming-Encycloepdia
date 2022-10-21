@@ -2,9 +2,7 @@ import { Discussion } from '../models/Discussion.js';
 import { User } from '../models/User.js';
 
 export const createDiscussion = async (title, description, creatorId) => {
-    const discussion = await Discussion.create({ title, description, creatorId });
-
-    console.log(discussion);
+    await Discussion.create({ title, description, creatorId });
 };
 
 export const getAllDiscussions = async () => {
@@ -30,5 +28,10 @@ export const updateDiscussionById = async (discussionId, title, description) => 
 
 export const getMyDiscussions = async (userId) => {
     const discussions = await Discussion.find({ creatorId: userId }).lean();
+    return discussions;
+};
+
+export const getLastTenDiscussions = async () => {
+    const discussions = await Discussion.find().sort('-date').limit(10).lean();
     return discussions;
 };

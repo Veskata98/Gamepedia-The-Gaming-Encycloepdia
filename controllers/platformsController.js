@@ -8,7 +8,7 @@ platformController.get('/', async (req, res) => {
     try {
         const platforms = await getPlatforms();
         let platform_news = await platformNews();
-        platforms.forEach((x, i) => (x.image_background = `/static/assets/platforms/${i}.jpg`));
+        platforms.forEach((x, i) => (x.image_background = `/static/assets/platforms/${i}-min.jpg`));
 
         platform_news = platform_news.slice(0, 10).filter((x) => x.title.length <= 500);
 

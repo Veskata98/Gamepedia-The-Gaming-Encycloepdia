@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { getLastTenDiscussions } from '../services/discussionService.js';
 import { getNews } from '../services/newsService.js';
 
 const homeController = Router();
@@ -38,7 +39,15 @@ homeController.get('/', async (req, res) => {
             x.date = x.date.toLocaleString();
         });
 
-        res.render('home', { title: 'Gamepedia', news: gamingNews });
+        const lastDiscussions = await getLastTenDiscussions();
+
+        lastDiscussions.forEach((x) => {
+            x.date = x.date.toLocaleString();
+        });
+
+        const mainNewsArticle = gamingNews.shift();
+
+        res.render('home', { title: 'Gamepedia', mainNewsArticle, news: gamingNews, discussions: lastDiscussions });
     } catch (error) {
         res.render('home', { title: 'Gamepedia' });
     }

@@ -11,6 +11,7 @@ import {
     getMyDiscussions,
     updateDiscussionById,
 } from '../services/discussionService.js';
+import { createComment, getAllCommentsForDiscussion } from '../services/commentService.js';
 
 const discussionsController = Router();
 
@@ -135,11 +136,30 @@ discussionsController.get('/:id', async (req, res) => {
         const discussion = await getDiscussionById(discussionId);
         discussion.date = discussion.date.toLocaleString();
 
+        const comments = await getAllCommentsForDiscussion(discussionId);
+        comments.map((x) => (x.date = x.date.toLocaleString()));
+
         isOwner(discussion.creatorId, req, res);
 
-        res.render('oneDiscussion', { title: `${discussion.title} - Discussions - Gamepedia`, discussion });
+        res.render('oneDiscussion', { title: `${discussion.title} - Discussions - Gamepedia`, discussion, comments });
     } catch (error) {
         res.redirect('/forum');
+    }
+});
+
+discussionsController.post('/:id/postComment', hasUser, async (req, res) => {
+    const discussionId = req.params.id;
+    const description = req.body.description.trim();
+    if (description) {
+        try {
+            await createComment(description, req.user.userId, discussionId);
+            res.redirect(`/forum/discussions/${discussionId}`);
+        } catch (error) {
+            console.log(error);
+            res.render('404', { title: 'Page Not Found - Gamepedia' });
+        }
+    } else {
+        res.redirect(`/forum/discussions/${discussionId}`);
     }
 });
 

@@ -2,26 +2,58 @@
     <h1 class='home-heading'>
         Gamepedia - The Gaming Encyclopedia
     </h1>
-    <h2 class='home-subheading'>Gaming News</h2>
-    <div class='home-news-container'>
-        {{#each news}}
-            <article class='home-news-article'>
-                <img src='{{image}}' alt='news_img' class='home-news-article-img' />
-                <div class='home-news-article-text'>
-                    <h3 class='home-news-article-title'>
-                        {{title}}
+    <div class='home-divider'>
+        <div class='home-news-container'>
+            <h2 class='home-subheading'>Gaming News</h2>
+            <article class='home-mainNews-article'>
+                <img src='{{mainNewsArticle.image}}' alt='news_img' class='home-mainNews-article-img' />
+                <div class='home-mainNews-article-text'>
+                    <h3 class='home-mainNews-article-title'>
+                        {{mainNewsArticle.title}}
                     </h3>
-                    <p class='home-news-article-date'>
-                        {{date}}
+                    <p class='home-mainNews-article-date'>
+                        {{mainNewsArticle.date}}
                     </p>
-                    <p class='home-news-article-desc'>
-                        {{description}}
+                    <p class='home-mainNews-article-desc'>
+                        {{mainNewsArticle.description}}
                     </p>
-                    <a href='{{link}}' class='home-news-article-link' target='_blank'>
+                    <a href='{{mainNewsArticle.link}}' class='home-mainNews-article-link' target='_blank'>
                         Read More
                     </a>
                 </div>
             </article>
-        {{/each}}
+            {{#each news}}
+                <article class='home-news-article'>
+                    <img src='{{image}}' alt='news_img' class='home-news-article-img' />
+                    <div class='home-news-article-text'>
+                        <h3 class='home-news-article-title'>
+                            {{title}}
+                        </h3>
+                        <p class='home-news-article-date'>
+                            {{date}}
+                        </p>
+                        <p class='home-news-article-desc'>
+                            {{description}}
+                        </p>
+                        <a href='{{link}}' class='home-news-article-link' target='_blank'>
+                            Read More
+                        </a>
+                    </div>
+                </article>
+            {{/each}}
+        </div>
+        <div class='last-discussions'>
+            <h2 class="home-subheading">Latest Discussions</h1>
+            <ul class="last-discussion-list" role="list">
+                {{#each discussions}}
+                <li class="last-discussion-item">
+                <a href='/forum/discussions/{{_id}}'>
+                    <p class="last-discussion-title">{{title}}</p>
+                    <p class="last-discussion-date">{{date}}</p>
+                </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </section>

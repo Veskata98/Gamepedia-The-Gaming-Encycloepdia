@@ -62,3 +62,7 @@ main {
     padding: 5px;
     margin: 5px;
 }
+
+.right {
+    justify-content: end;
+}

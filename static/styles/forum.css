@@ -11,7 +11,7 @@
 .forum-heading {
     text-decoration: none;
     color: #fff;
-    background-color: #9d7aff;
+    background-color: #7242f8;
     padding: 0.5rem;
     font-size: 1.5rem;
     margin-right: 0.5rem;
@@ -179,9 +179,8 @@
 .one-discussion-container {
     width: 70%;
     padding: 2rem;
-    padding-bottom: 2rem;
     padding-bottom: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background-color: #ccb9ff;
     display: flex;
     flex-direction: column;
@@ -229,7 +228,19 @@
     width: 50%;
     justify-content: space-around;
     margin: auto;
-    margin-bottom: 1.5rem;
+}
+
+.edit-discussion-link {
+    font-size: 1.2rem;
+}
+
+.edit-discussion-link i {
+    margin-right: 0.25rem;
+}
+
+.last-line-discussion {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Comment Section */
@@ -247,7 +258,7 @@
 .comment {
     background-color: #ccb9ff;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .comments-container {
@@ -282,7 +293,7 @@
     width: 70%;
     margin: auto;
     background-color: #ccb9ff;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .add-comment form {
@@ -300,12 +311,11 @@
     margin-bottom: 1rem;
     padding: 0.5rem 1.5rem 0 1rem;
     font-size: 1rem;
-    font-family: Montserrat;
     outline: none;
 }
 
 .add-comment h1 {
-    padding-left: 1rem;
+    padding: 1rem;
     font-size: 1.75rem;
 }
 
